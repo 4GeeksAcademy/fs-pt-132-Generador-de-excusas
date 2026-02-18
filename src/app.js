@@ -16,7 +16,6 @@ window.onload = function() {
     const btn = document.querySelector('#excuse-btn');
     const list = document.querySelector('#excuse-list');
 
-    // 4. Escuchador de eventos
     if (btn) {
         btn.addEventListener('click', () => {
             const excuseText = generateExcuse();
