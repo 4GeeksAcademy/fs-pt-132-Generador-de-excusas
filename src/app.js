@@ -20,10 +20,13 @@ window.onload = () => {
 
     const handleNewExcuse = () => {
         
-        const subject = getRandom(EXCUSE_PARTS.who);
-        const action = getRandom(EXCUSE_PARTS.action);
-        const what = getRandom(EXCUSE_PARTS.what);
-        const when = getRandom(EXCUSE_PARTS.when);
+       let excuseData = {}; 
+        
+        for (let key in EXCUSE_PARTS) {
+            excuseData[key] = getRandom(EXCUSE_PARTS[key]);
+        };
+
+        const { who: subject, action, what, when } = excuseData;
 
         const excuseText = `${subject} ${action} ${what} ${when}.`;
         
